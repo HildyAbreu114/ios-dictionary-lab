@@ -143,13 +143,17 @@ var code = [
 ]
 
 var message = "hello world"
-```
+
 var message = "hello world"
 print (code["g"]!, code["d"]!, code["k"]!, code["k"]!, code["n"]!,  code["v"]!, code["n"]!, code["q"]!, code["k"]!, code["c"]!)
 
+```
 You are also given an `encodedMessage` which contains only lowercase letters and spaces. Use the `code` dictionary to decode the message and print it.
 `var encodedMessage = "uijt nfttbhf jt ibse up sfbe"`
-
+```
+var encodedMessage = "uijt nfttbhf jt ibse up sfbe"
+print (code["s"]!, code["g"]!, code["h"]!,  code["r"]!, code["l"]!,  code["d"]!, code["r"]!, code["r"]!, code["z"]!, code["d"]!, code["h"]!, code["r"]!, code["g"]!, code["z"]!, code["q"]!,  code["c"]!, code["s"]!, code["n"]!, code["q"]!, code["d"]!, code["z"]!, code["c"]!)
+```
 
 ## Question 5
 
