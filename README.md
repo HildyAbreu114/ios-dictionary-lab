@@ -10,29 +10,70 @@ Fork and clone this repo. On your fork, answer and commit the follow questions. 
 - Add two more countries to your dictionary.
 
 - Translate at least 3 of the capital names into another language.
+```
+var citiesDistrict = ["Dominican Republic": "Santo Domingo", "Canada": "Ottawa", "Italy": "Rome"]
+citiesDistrict["Argentina"] = "Buenos Aires"
+citiesDistrict["Armenia"] = "Yerevan"
+//print (citiesDistrict)
 
-
+citiesDistrict["Italy"] = "Roma"
+citiesDistrict["Dominican Republic"] = "سانتو دومينغو"
+citiesDistrict["Argentina"] = "ブエノアイレス"
+print (citiesDistrict)
+```
 ## Question 2
 
 `var someDict:[String:Int] = ["One": 1, "Two": 4, "Three": 9, "Four": 16, "Five": 25]`
 
 - Using `someDict`, add together the values associated with "Three" and "Five" and print the result.
+```
+if let sum = someDict["Three"]{
+if let sum1 = someDict["Five"]{
 
+print(sum + sum1)
+}
+}
+```
 - Add values to the dictionary for the keys "Six" and "Seven".
 
+```
+someDict ["Six"] = 6
+someDict ["Seven"] = 7
+print (someDict)
+```
+
 - Make a key called `productUpToSeven` and set its value equal to the product of all the values.
-
+```
+if let one = someDict["One"], let two = someDict["Two"], let Three = someDict["Three"], let four = someDict["Four"], let five = someDict["Five"], let six = someDict["Six"] , let seven = someDict["Seven"] {
+someDict["product of Seven"] = one * two * Three * four * five * six * seven
+}
+print(someDict["product of Seven"]!)
+```
 - Make a key called `sumUpToSix` and set its value equal to the sum of the keys "One", "Two", "Three", "Four", "Five" and "Six".
-
+```
+var sum = 0
+for v in someDict.values {
+if let one = someDict["One"], let two = someDict["Two"], let Three = someDict["Three"], let four = someDict["Four"], let five = someDict["Five"], let six = someDict["Six"] {
+sum  += v
+}
+}
+someDict["sumUpToSix"] = sum
+```
 - Remove the new keys made in the previous two steps
+```
+someDict ["Six"] = nil
+someDict ["Seven"] = nil
 
+```
 - Add 2 to every value inside of `someDict`.
 
 
 ## Question 3
 
 Create a variable that is explicitly typed as a dictionary that maps strings to floating point numbers. Initialize the variable to the data shown in the table below which lists an author name and their comprehensibility score.
-
+```
+variables : var boothAuths: [String: Double] = ["Mark Twain":8.9, "Nathaniel Hawthorne":5.1, "John Steinbeck":2.3, "C.S. Lewis":9.9, "Jon Krakauer":6.1]
+```
 | Author Name |	Score |
 | :--: | :--: |
 | Mark Twain |	8.9 |
@@ -44,14 +85,29 @@ Create a variable that is explicitly typed as a dictionary that maps strings to 
 Using the dictionary created in the previous problem, do the following:
 
 - Print out the floating-point score for “John Steinbeck”.
-
+```
+print(bookAuths["John Steinbeck"]!)
+```
 - Add an additional author named “Erik Larson” with an assigned score of 9.2.
-
+```
+bookAuths["Erik Larson"] = 9.2
+```
 - Write an if/else statement that compares the score of John Krakaur with Mark Twain. Print out the name of the author with the highest score.
-
+```
+if let john = bookAuths["john"], let mark = bookAuths["mark"] {
+if john > mark {
+print("John has the higher score")
+}
+} else {
+print("Mark has the higher score")
+}
+```
 - Use a for-loop to iterate through the dictionary you created at the beginning of the problem, and print out the content in the form of key: value, one entry per line.
-
-
+```
+for (names, ratings) in bookAuthors.enumerated() {
+print(names, ratings)
+}
+```
 ## Question 4
 
 You are given a dictionary code of type [String:String] which has values for all lowercase letters. The code dictionary represents a way to encode a message. For example if code["a"] = "z" and code["b"] = "x" the encoded version if "ababa" will be "zxzxz". You are also given a message which contains only lowercase letters and spaces. Use the `code` dictionary below to encode the message and print it.
@@ -88,6 +144,8 @@ var code = [
 
 var message = "hello world"
 ```
+var message = "hello world"
+print (code["g"]!, code["d"]!, code["k"]!, code["k"]!, code["n"]!,  code["v"]!, code["n"]!, code["q"]!, code["k"]!, code["c"]!)
 
 You are also given an `encodedMessage` which contains only lowercase letters and spaces. Use the `code` dictionary to decode the message and print it.
 `var encodedMessage = "uijt nfttbhf jt ibse up sfbe"`
